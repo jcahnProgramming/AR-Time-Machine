@@ -10,7 +10,10 @@
  
  1. Way to identify Time Machine based on Logo
  2. Instructions on how to use device
-    - Assembly
-    - Initialization
-    - How to use once set up
-    - the app should be able to identify each piece.
+    - Face camera towards front logo
+    - scan product model sticker on back
+    - highlight screen on front panel and show text on screen to set date/time for travel
+    - confirm to user that lever is in down position
+    - when ready flick lever to up position (safety button)
+    - click "start" or "go" button
+    - (NEED A WAY FOR USER TO FEEL LIKE THEY ARE IN THE PAST) -- possibly post time/date on screen that user picked?
