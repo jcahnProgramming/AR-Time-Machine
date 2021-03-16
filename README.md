@@ -1,10 +1,10 @@
 # AR-Time Machine
  
  #Project Members:
- #Jamie Cahn
- #Mateo Larrea Ferro
- #Asuquo Eyo
- #Eui Joon Kim
+ Jamie Cahn | 
+ Mateo Larrea Ferro | 
+ Asuquo Eyo | 
+ Eui Joon Kim
  
 # Time Machine AR App
  
