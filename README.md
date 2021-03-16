@@ -1,6 +1,6 @@
 # AR-Time Machine
  
- #Project Members:
+ Project Members:
  Jamie Cahn | 
  Mateo Larrea Ferro | 
  Asuquo Eyo | 
