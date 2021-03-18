@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5076333007140353116
+  m_GuidHigh: 7325486038276473526
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4749599839848314045
+      m_GuidHigh: 2777092350058951567
+    m_SerializedTextureGuid:
+      m_GuidLow: 1109266693607091716
+      m_GuidHigh: 6949694512826032331
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Switches
+    m_Texture: {fileID: 2800000, guid: 419f6e04e82e0f64cb207a9e56467260, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5465480254928131200
+      m_GuidHigh: 7428829559034656439
+    m_SerializedTextureGuid:
+      m_GuidLow: 17065526397753155471
+      m_GuidHigh: 1073414560205277739
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: SpaceSelectStation
+    m_Texture: {fileID: 2800000, guid: 7b20df8fedd7ecd42b8ac4f5da88e50e, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5714050407738694874
+      m_GuidHigh: 17785723789101636750
+    m_SerializedTextureGuid:
+      m_GuidLow: 2325130828886549073
+      m_GuidHigh: 2349607071202908875
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: TravelSettings
+    m_Texture: {fileID: 2800000, guid: 7817a251862b2044cb9acbb82e7b9b20, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5649545930324279037
+      m_GuidHigh: 4731260906837508997
+    m_SerializedTextureGuid:
+      m_GuidLow: 3676217963024482749
+      m_GuidHigh: 13730290830205360475
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: TimePanel
+    m_Texture: {fileID: 2800000, guid: 8afc01bd8cc233045b99318dc3ca8bbe, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5200470858869967935
+      m_GuidHigh: 94431046097540503
+    m_SerializedTextureGuid:
+      m_GuidLow: 0
+      m_GuidHigh: 0
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: logo
+    m_Texture: {fileID: 0}
