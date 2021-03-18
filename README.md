@@ -11,7 +11,7 @@
 # 1. Way to identify Time Machine based on Logo
 # 2. Instructions on how to use device
     - Face camera towards front logo
-    - scan product model sticker on back
+    - AR Tracked Image Manager
     - highlight screen on front panel and show text on screen to set date/time for travel
     - confirm to user that lever is in down position
     - when ready flick lever to up position (safety button)
