@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\ImageTracking.cs" />
+    <Compile Include="Assets\Scripts\JamieReferenceTracking.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.20f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -649,6 +650,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
+      <HintPath>E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
@@ -666,9 +670,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
-      <HintPath>E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

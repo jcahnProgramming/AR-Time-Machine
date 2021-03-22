@@ -59,9 +59,9 @@ MonoBehaviour:
       m_GuidLow: 5200470858869967935
       m_GuidHigh: 94431046097540503
     m_SerializedTextureGuid:
-      m_GuidLow: 0
-      m_GuidHigh: 0
+      m_GuidLow: 9409274475025223693
+      m_GuidHigh: 12254872951463723065
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: logo
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 5607500d7548829439c0892f050e12aa, type: 3}
