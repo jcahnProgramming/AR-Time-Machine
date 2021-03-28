@@ -11,8 +11,7 @@ public class ImageTracking : MonoBehaviour
     //public ARTrackedImageManager manager;
     public XRReferenceImageLibrary myLibrary;
     public XRImageTrackingSubsystem subsystem;
-    public Button startScanning;
-
+    public bool startScanning = false;
 
 
     void Awake()
@@ -29,7 +28,7 @@ public class ImageTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (startScanning)
+       if (startScanning == true)
         {
             ScanForLogo();
         }
@@ -40,6 +39,17 @@ public class ImageTracking : MonoBehaviour
         if (myLibrary[4].texture)
         {
             //when logo has been identified, then move to next step
+            StopScanning();
         }
+    }
+
+    public void StartScanning()
+    {
+        startScanning = true;
+    }
+
+    public void StopScanning()
+    {
+        startScanning = false;
     }
 }
