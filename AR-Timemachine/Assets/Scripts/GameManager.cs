@@ -29,10 +29,27 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void PlaceSelector() //jamie's function
+    public void PlaceSelector() //jamie's function
     {
         
     }
+
+    public void SafetySwitches() //EJ's function
+    {
+
+    }
+
+    public void TimePanel() //Mateo's Function
+    {
+
+    }
+
+    public void TravelDuration() //Asuquo's Function
+    {
+
+    }
+
+
 
     void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnChanged;
     void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnChanged;
