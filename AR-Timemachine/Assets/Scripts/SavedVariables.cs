@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SavedVariables : MonoBehaviour
 {
+    public GameObject Reminder;
 
-    private string buttonPressed = "no_destination";
+
+    public string buttonPressed = "no_destination";
+    public string yearText = "2021";
     
     // Start is called before the first frame update
     void Start()
@@ -22,20 +25,24 @@ public class SavedVariables : MonoBehaviour
     public void USButtonPressed()
     {
         buttonPressed = "united_states";
+        Reminder.SetActive(true);
     }
 
     public void AFButtonPressed()
     {
         buttonPressed = "Africa";
+        Reminder.SetActive(true);
     }
 
     public void JPButtonPressed()
     {
         buttonPressed = "Japan";
+        Reminder.SetActive(true);
     }
 
     public void CAButtonPressed()
     {
         buttonPressed = "Canada";
+        Reminder.SetActive(true);
     }
 }

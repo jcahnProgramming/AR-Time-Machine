@@ -4,12 +4,17 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public XRReferenceImageLibrary myLibrary;
-    [SerializeField]
-    ARTrackedImageManager m_TrackedImageManager;
+    //[SerializeField]
+    //ARTrackedImageManager m_TrackedImageManager;
+
+    public GameObject DestinationSelector;
+    public Text year;
+    public SavedVariables sv;
 
     void Awake()
     {
@@ -31,7 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void PlaceSelector() //jamie's function
     {
-        
+        DestinationSelector.SetActive(true);
+        year.text = sv.yearText;
     }
 
     public void SafetySwitches() //EJ's function
@@ -51,24 +57,24 @@ public class GameManager : MonoBehaviour
 
 
 
-    void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnChanged;
-    void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnChanged;
+    //void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnChanged;
+    //void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnChanged;
 
-    void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    {
-        foreach (var newImage in eventArgs.added)
-        {
+    //void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
+    //{
+    //    foreach (var newImage in eventArgs.added)
+    //    {
 
-        }
+    //    }
 
-        foreach (var updatedImage in eventArgs.updated)
-        {
+    //    foreach (var updatedImage in eventArgs.updated)
+    //    {
 
-        }
+    //    }
 
-        foreach (var removedImage in eventArgs.removed)
-        {
+    //    foreach (var removedImage in eventArgs.removed)
+    //    {
 
-        }
-    }
+    //    }
+    //}
 }

@@ -21,13 +21,17 @@ public class ImageTracking : MonoBehaviour
     public Image CannotFindImage;
     private int _steps = 0;
     public GameManager manager;
-
+    public Animation anim;
+    public GameObject ball;
+    public GameObject logoPanel;
+    public GameObject Reminder;
 
 
     void Awake()
     {
-        subsystem.imageLibrary = myLibrary;
-        subsystem.Start();
+        //TODO: FIX THIS SECTION - JC
+        //subsystem.imageLibrary = myLibrary;
+        //subsystem.Start();
     }
     // Start is called before the first frame update
     void Start()
@@ -45,8 +49,8 @@ public class ImageTracking : MonoBehaviour
     {
         if (myLibrary[4].texture)
         {
-            //when logo has been identified, then move to next step
             StopScanning();
+            logoPanel.SetActive(true);
         }
     }
 
@@ -61,6 +65,7 @@ public class ImageTracking : MonoBehaviour
     }
     public void FirstTimeScan()
     {
+        ball.transform.position = new Vector3(-395f, 194f, 0f);
         StartScanning();
         ScanForLogo();
         PreviousBtn.gameObject.SetActive(true);
@@ -72,6 +77,8 @@ public class ImageTracking : MonoBehaviour
 
     public void NextButton()
     {
+        Reminder.SetActive(false);
+
         StartScanning();
         for (int i = 0; i < myLibrary.count; i++)
         {
@@ -79,71 +86,81 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 1)
                 {
+                    anim.Stop();
+                    ball.transform.position = new Vector3(-395f, 132f, 0f);
+                    anim.Play();
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps++;
                     StopScanning();
                     manager.SafetySwitches(); //runs EJ's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[2].texture)
             {
                 if (_steps == 2)
                 {
+                    ball.transform.position = new Vector3(-395f, 83f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps++;
                     StopScanning();
                     manager.TimePanel(); //runs Mateo's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[3].texture)
             {
                 if (_steps == 3)
                 {
+                    ball.transform.position = new Vector3(-395f, 29f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps++;
                     StopScanning();
                     manager.PlaceSelector(); //runs Jamie's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[4].texture)
             {
                 if (_steps == 4)
                 {
+                    ball.transform.position = new Vector3(-395f, -25f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     StopScanning();
                     manager.TravelDuration(); //runs Mateo's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[0].texture)
@@ -154,9 +171,9 @@ public class ImageTracking : MonoBehaviour
             }
             else
             {
-                Incorrect.gameObject.SetActive(true);
                 Correct.gameObject.SetActive(false);
                 CannotFindImage.gameObject.SetActive(false);
+                Incorrect.gameObject.SetActive(true);
             }
         }
 
@@ -164,6 +181,7 @@ public class ImageTracking : MonoBehaviour
 
     public void BackButton()
     {
+        Reminder.SetActive(false);
         StartScanning();
         for (int i = 0; i < myLibrary.count; i++)
         {
@@ -171,71 +189,79 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 1)
                 {
+                    ball.transform.position = new Vector3(-395f, 132f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     StopScanning();
                     manager.SafetySwitches(); //runs EJ's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[2].texture)
             {
                 if (_steps == 2)
                 {
+                    ball.transform.position = new Vector3(-395f, 83f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps--;
                     StopScanning();
                     manager.TimePanel(); //runs Mateo's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[3].texture)
             {
                 if (_steps == 3)
                 {
+                    ball.transform.position = new Vector3(-395f, 29f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps--;
                     StopScanning();
                     manager.PlaceSelector(); //runs Jamie's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[4].texture)
             {
                 if (_steps == 4)
                 {
+                    ball.transform.position = new Vector3(-395f, -25f, 0f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
-                    Correct.gameObject.SetActive(true); //2nd step
                     Incorrect.gameObject.SetActive(false); //3rd step
+                    Correct.gameObject.SetActive(true); //2nd step
                     _steps--;
                     StopScanning();
                     manager.TravelDuration(); //runs Mateo's function
+                    Reminder.SetActive(true);
                 }
                 else
                 {
-                    Incorrect.gameObject.SetActive(true);
                     Correct.gameObject.SetActive(false);
                     CannotFindImage.gameObject.SetActive(false);
+                    Incorrect.gameObject.SetActive(true);
                 }
             }
             else if (myLibrary[i].texture == myLibrary[0].texture)
@@ -245,9 +271,9 @@ public class ImageTracking : MonoBehaviour
             }
             else
             {
-                Incorrect.gameObject.SetActive(true);
                 Correct.gameObject.SetActive(false);
                 CannotFindImage.gameObject.SetActive(false);
+                Incorrect.gameObject.SetActive(true);
             }
         }
     }
