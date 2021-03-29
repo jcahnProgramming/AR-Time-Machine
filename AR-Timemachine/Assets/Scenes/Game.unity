@@ -231,9 +231,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: 145}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23714346
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076287164}
+      - m_Target: {fileID: 0}
         m_MethodName: JPButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -657,9 +657,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: 145}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157079098
@@ -908,9 +908,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 386, y: 145}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321268569
@@ -1063,9 +1063,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -20.8}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -217}
   m_SizeDelta: {x: 364.06274, y: 293.67676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427282743
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   ball: {fileID: 805366809}
   logoPanel: {fileID: 427282741}
-  Reminder: {fileID: 0}
+  Reminder: {fileID: 1850797309}
 --- !u!4 &461773645
 Transform:
   m_ObjectHideFlags: 0
@@ -1261,9 +1261,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 478, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &575744085
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076287164}
+      - m_Target: {fileID: 0}
         m_MethodName: USButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -1851,9 +1851,9 @@ RectTransform:
   m_Father: {fileID: 525568403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395, y: 194}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -396, y: 142}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805366811
@@ -2581,7 +2581,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076287165}
-  - component: {fileID: 1076287164}
   - component: {fileID: 1076287163}
   - component: {fileID: 1076287166}
   m_Layer: 0
@@ -2606,22 +2605,7 @@ MonoBehaviour:
   myLibrary: {fileID: 11400000, guid: 0ea5101b4dd1e4c438d9377e23fe1b09, type: 2}
   DestinationSelector: {fileID: 196950084}
   year: {fileID: 1512415066}
-  sv: {fileID: 1076287164}
---- !u!114 &1076287164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076287162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9388ef524708f624398c54629d3eb83c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Reminder: {fileID: 0}
-  buttonPressed: no_destination
-  yearText: 2021
+  sv: {fileID: 1076287166}
 --- !u!4 &1076287165
 Transform:
   m_ObjectHideFlags: 0
@@ -2760,7 +2744,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076287164}
+      - m_Target: {fileID: 0}
         m_MethodName: AFButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -4379,7 +4363,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1076287164}
+      - m_Target: {fileID: 0}
         m_MethodName: CAButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -4564,9 +4548,9 @@ RectTransform:
   m_Father: {fileID: 1320983523}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 407, y: -104}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -50, y: 149}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1850797311

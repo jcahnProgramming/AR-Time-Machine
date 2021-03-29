@@ -21,8 +21,8 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 9409274475025223693
       m_GuidHigh: 12254872951463723065
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 1, y: 0.8419118}
+    m_SpecifySize: 1
     m_Name: logo
     m_Texture: {fileID: 2800000, guid: 5607500d7548829439c0892f050e12aa, type: 3}
   - m_SerializedGuid:
@@ -32,7 +32,7 @@ MonoBehaviour:
       m_GuidLow: 1109266693607091716
       m_GuidHigh: 6949694512826032331
     m_Size: {x: 2.1612904, y: 1.4806563}
-    m_SpecifySize: 0
+    m_SpecifySize: 1
     m_Name: Switches
     m_Texture: {fileID: 2800000, guid: 419f6e04e82e0f64cb207a9e56467260, type: 3}
   - m_SerializedGuid:
@@ -41,8 +41,8 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 3676217963024482749
       m_GuidHigh: 13730290830205360475
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 1, y: 1.2152256}
+    m_SpecifySize: 1
     m_Name: TimePanel
     m_Texture: {fileID: 2800000, guid: 8afc01bd8cc233045b99318dc3ca8bbe, type: 3}
   - m_SerializedGuid:
@@ -61,7 +61,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 2325130828886549073
       m_GuidHigh: 2349607071202908875
-    m_Size: {x: 0, y: 0}
-    m_SpecifySize: 0
+    m_Size: {x: 1, y: 0.6418269}
+    m_SpecifySize: 1
     m_Name: TimeDuration
     m_Texture: {fileID: 2800000, guid: 7817a251862b2044cb9acbb82e7b9b20, type: 3}

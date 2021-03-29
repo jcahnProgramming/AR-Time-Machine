@@ -30,8 +30,8 @@ public class ImageTracking : MonoBehaviour
     void Awake()
     {
         //TODO: FIX THIS SECTION - JC
-        //subsystem.imageLibrary = myLibrary;
-        //subsystem.Start();
+        subsystem.imageLibrary = myLibrary;
+        subsystem.Start();
     }
     // Start is called before the first frame update
     void Start()
@@ -65,7 +65,7 @@ public class ImageTracking : MonoBehaviour
     }
     public void FirstTimeScan()
     {
-        ball.transform.position = new Vector3(-395f, 194f, 0f);
+        ball.transform.position = new Vector2(-395f, 194f);
         StartScanning();
         ScanForLogo();
         PreviousBtn.gameObject.SetActive(true);
@@ -87,7 +87,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 1)
                 {
                     anim.Stop();
-                    ball.transform.position = new Vector3(-395f, 132f, 0f);
+                    ball.transform.position = new Vector2(-395f, 132f);
                     anim.Play();
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
@@ -108,7 +108,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 2)
                 {
-                    ball.transform.position = new Vector3(-395f, 83f, 0f);
+                    ball.transform.position = new Vector2(-395f, 83f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -128,7 +128,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 3)
                 {
-                    ball.transform.position = new Vector3(-395f, 29f, 0f);
+                    ball.transform.position = new Vector2(-395f, 29f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -148,7 +148,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 4)
                 {
-                    ball.transform.position = new Vector3(-395f, -25f, 0f);
+                    ball.transform.position = new Vector2(-395f, -25f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -189,7 +189,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 1)
                 {
-                    ball.transform.position = new Vector3(-395f, 132f, 0f);
+                    ball.transform.position = new Vector2(-395f, 132f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -208,7 +208,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 2)
                 {
-                    ball.transform.position = new Vector3(-395f, 83f, 0f);
+                    ball.transform.position = new Vector2(-395f, 83f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -228,7 +228,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 3)
                 {
-                    ball.transform.position = new Vector3(-395f, 29f, 0f);
+                    ball.transform.position = new Vector2(-395f, 29f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -248,7 +248,7 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 4)
                 {
-                    ball.transform.position = new Vector3(-395f, -25f, 0f);
+                    ball.transform.position = new Vector2(-395f, -25f);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
