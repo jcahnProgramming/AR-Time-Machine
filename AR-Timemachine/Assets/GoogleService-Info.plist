@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>540067818484-dq0mmrhtl1fis3c0euipt1sq8himc8os.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.540067818484-dq0mmrhtl1fis3c0euipt1sq8himc8os</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCK5kU7tLkcPINktGZrxYfrPwh1NIlo-hE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>540067818484</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.XRTerra.AR-Timemachine</string>
+	<key>PROJECT_ID</key>
+	<string>artimemachine-15a76</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artimemachine-15a76.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:540067818484:ios:caa357b53ed718679c67a1</string>
+</dict>
+</plist>
