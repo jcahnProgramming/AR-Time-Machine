@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "501440486434",
+    "project_id": "ar-timemachine",
+    "storage_bucket": "ar-timemachine.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501440486434:android:15a9eed96f54b5b39ffe7b",
+        "android_client_info": {
+          "package_name": "com.XRTerra.ARTimemachine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501440486434-1hcgnh56p7lohtalkit63b0pc1unbo6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaljhjp-3qfMMXIs3RpsOwc9lll3guekc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501440486434-1hcgnh56p7lohtalkit63b0pc1unbo6i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "501440486434-ebb8e7f66pgi326knlse8uugdvuos5og.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.XRTerra.AR-Timemachine"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

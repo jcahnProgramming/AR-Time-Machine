@@ -6,6 +6,7 @@ using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public XRReferenceImageLibrary myLibrary;
@@ -15,8 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject DestinationSelector;
     public Text year;
     public SavedVariables sv;
-
-
+    public Text travelDur;
+    public Button saveDurationBTN;
 
 
     //TIME PANEL VARIABLES
@@ -48,7 +49,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void PlaceSelector() //jamie's function
+    public void PlaceSelector() //Jamie's function
     {
         DestinationSelector.SetActive(true);
         year.text = sv.yearText;
@@ -176,29 +177,6 @@ public class GameManager : MonoBehaviour
 
     public void TravelDuration() //Asuquo's Function
     {
-
+        
     }
-
-
-
-    //void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnChanged;
-    //void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnChanged;
-
-    //void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    //{
-    //    foreach (var newImage in eventArgs.added)
-    //    {
-
-    //    }
-
-    //    foreach (var updatedImage in eventArgs.updated)
-    //    {
-
-    //    }
-
-    //    foreach (var removedImage in eventArgs.removed)
-    //    {
-
-    //    }
-    //}
 }
