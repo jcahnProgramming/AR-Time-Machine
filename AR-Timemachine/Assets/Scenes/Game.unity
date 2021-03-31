@@ -4375,6 +4375,7 @@ GameObject:
   - component: {fileID: 1076287163}
   - component: {fileID: 1076287166}
   - component: {fileID: 1076287164}
+  - component: {fileID: 1076287167}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4395,7 +4396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLibrary: {fileID: 11400000, guid: 0ea5101b4dd1e4c438d9377e23fe1b09, type: 2}
+  Switches: {fileID: 0}
+  TimePanelInterface: {fileID: 1968803390}
   DestinationSelector: {fileID: 196950084}
+  TimeSettings: {fileID: 1185701984}
   year: {fileID: 1512415066}
   sv: {fileID: 1076287166}
   MilSelected: 0
@@ -4545,14 +4549,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Reminder: {fileID: 1850797309}
   buttonPressed: no_destination
-  yearText: 2021
+  dateText: 2021
   gameManagerScript: {fileID: 0}
   sfx:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 63c8236af78874265923b0a95cad11cf, type: 3}
+  - {fileID: 8300000, guid: 694e76e67382d4566bfdc530bb7c6223, type: 3}
+  - {fileID: 8300000, guid: 6bced607d2d714a47b1ba6a246b56115, type: 3}
+  - {fileID: 8300000, guid: f4b2c8a92d5464779a4fcd2b131dd822, type: 3}
+  - {fileID: 8300000, guid: 5fa0e44673891421a8281680673aeca6, type: 3}
+--- !u!81 &1076287167
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076287162}
+  m_Enabled: 1
 --- !u!1 &1128400156
 GameObject:
   m_ObjectHideFlags: 0
