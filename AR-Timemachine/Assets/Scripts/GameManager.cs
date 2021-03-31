@@ -13,10 +13,8 @@ public class GameManager : MonoBehaviour
     //ARTrackedImageManager m_TrackedImageManager;
 
     public GameObject DestinationSelector;
-    public Text year;
+    public Text year; //should come from date variable (time panel)
     public SavedVariables sv;
-
-
 
 
     //TIME PANEL VARIABLES
@@ -26,6 +24,10 @@ public class GameManager : MonoBehaviour
     public int Mil, Cent, Year, Month, Day, Hour; //To store value of user input
     public Text milText, centText, yearText, monthText, dayText, hourText;
     public int Date; //OUTPUT
+
+    //TIME SETTINGS VARIABLES
+    public int durationOfTravel;
+    public Text displayText;
 
 
 
@@ -176,6 +178,21 @@ public class GameManager : MonoBehaviour
 
     public void TravelDuration() //Asuquo's Function
     {
+       
+        if (durationOfTravel == 1) {
+            displayText.text = "Slow";
+
+        }
+
+        if (durationOfTravel == 2) {
+            displayText.text = "Intermediate";
+
+        }
+
+        if (durationOfTravel == 3) {
+            displayText.text = "Fast";
+
+        }
 
     }
 

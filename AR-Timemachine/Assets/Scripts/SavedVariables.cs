@@ -6,16 +6,20 @@ public class SavedVariables : MonoBehaviour
 {
     public GameObject Reminder;
 
-
+    //Place Selector
     public string buttonPressed = "no_destination";
     public string yearText = "2021";
 
+    //Game Manager Script
     public GameManager gameManagerScript;
+
+    int count; //Time Settings
     
     // Start is called before the first frame update
     void Start()
     {
         gameManagerScript = GetComponent<GameManager>();
+        count = 0;
     }
 
     // Update is called once per frame
@@ -157,5 +161,29 @@ public class SavedVariables : MonoBehaviour
         gameManagerScript.Date = (gameManagerScript.Mil * 1000) + (gameManagerScript.Cent * 100) + (gameManagerScript.Year * 1);
         Debug.Log(gameManagerScript.Date);
     }
+
+    //TIME SETTINGS
+
+    public void DurationOfTravel()
+    {
+        count++;
+        if (count != 0)
+        {
+            gameManagerScript.durationOfTravel = count;
+
+            if (count == 3)
+            {
+                count = 0;
+            }
+        }
+
+    }
+
+    public void Save()
+    {
+        // Everything is ready
+    }
+
+   
 
 }
