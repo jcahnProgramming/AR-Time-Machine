@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     //[SerializeField]
     //ARTrackedImageManager m_TrackedImageManager;
 
-    public GameObject DestinationSelector;
+    public GameObject Switches, TimePanelInterface, DestinationSelector, TimeSettings;
     public Text year; //should come from date variable (time panel)
     public SavedVariables sv;
 
@@ -26,8 +26,10 @@ public class GameManager : MonoBehaviour
     public int Date; //OUTPUT
 
     //TIME SETTINGS VARIABLES
+
     public int durationOfTravel;
     public Text displayText;
+
 
 
 
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Date = 0;
+  
     }
 
     // Update is called once per frame
@@ -53,16 +56,33 @@ public class GameManager : MonoBehaviour
     public void PlaceSelector() //jamie's function
     {
         DestinationSelector.SetActive(true);
-        year.text = sv.yearText;
+        year.text = sv.dateText;
+        
     }
 
     public void SafetySwitches() //EJ's function
     {
+        //TURN ON UI
+        Switches.SetActive(true);
+
+        //TURN OTHER PANELS OFF
+        TimePanelInterface.SetActive(false);
+        DestinationSelector.SetActive(false);
+        TimeSettings.SetActive(false);
 
     }
 
     public void TimePanel() //Mateo's Function
     {
+        //TURN ON UI
+        TimePanelInterface.SetActive(true);
+
+        //TURN OTHER PANELS OFF
+        Switches.SetActive(false);
+        DestinationSelector.SetActive(false);
+        TimeSettings.SetActive(false);
+
+
         //POST-BUTTON LOGIC
 
         if (MilSelected == true)
@@ -71,12 +91,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Mil++;
+                
                 Increasement = false;
                 milText.text = Mil.ToString();
             }
             else if (Decreasement == true)
             {
                 Mil--;
+                
                 Decreasement = false;
                 milText.text = Mil.ToString();
             }
@@ -90,12 +112,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Cent++;
+               
                 Increasement = false;
                 centText.text = Cent.ToString();
             }
             else if (Decreasement == true)
             {
                 Cent--;
+                
                 Decreasement = false;
                 centText.text = Cent.ToString();
             }
@@ -108,12 +132,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Year++;
+                
                 Increasement = false;
                 yearText.text = Year.ToString();
             }
             else if (Decreasement == true)
             {
                 Year--;
+                
                 Decreasement = false;
                 yearText.text = Year.ToString();
             }
@@ -126,12 +152,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Month++;
+                
                 Increasement = false;
                 monthText.text = Month.ToString();
             }
             else if (Decreasement == true)
             {
                 Month--;
+                
                 Decreasement = false;
                 yearText.text = Year.ToString();
             }
@@ -144,12 +172,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Day++;
+                
                 Increasement = false;
                 dayText.text = Day.ToString();
             }
             else if (Decreasement == true)
             {
                 Day--;
+                
                 Decreasement = false;
                 dayText.text = Day.ToString();
             }
@@ -162,12 +192,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Hour++;
+                
                 Increasement = false;
                 hourText.text = Hour.ToString();
             }
             else if (Decreasement == true)
             {
                 Hour--;
+                
                 Decreasement = false;
                 hourText.text = Hour.ToString();
             }
@@ -178,19 +210,30 @@ public class GameManager : MonoBehaviour
 
     public void TravelDuration() //Asuquo's Function
     {
-       
+        //TURN ON UI
+        TimeSettings.SetActive(true);
+
+        //TURN OTHER PANELS OFF
+        TimePanelInterface.SetActive(false);
+        DestinationSelector.SetActive(false);
+        Switches.SetActive(false);
+
+
         if (durationOfTravel == 1) {
             displayText.text = "Slow";
+            
 
         }
 
         if (durationOfTravel == 2) {
             displayText.text = "Intermediate";
+            
 
         }
 
         if (durationOfTravel == 3) {
             displayText.text = "Fast";
+            
 
         }
 

@@ -8,18 +8,24 @@ public class SavedVariables : MonoBehaviour
 
     //Place Selector
     public string buttonPressed = "no_destination";
-    public string yearText = "2021";
+    public string dateText = "2021";
 
     //Game Manager Script
     public GameManager gameManagerScript;
 
     int count; //Time Settings
+
+
+    //AUDIO MANAGER
+    AudioSource Source;
+    public AudioClip [] sfx; //0 = button pressed, 1 = Ready, 2 = increase, 3 = decrease, 4 = process finished!;
     
     // Start is called before the first frame update
     void Start()
     {
         gameManagerScript = GetComponent<GameManager>();
         count = 0;
+        Source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,24 +42,35 @@ public class SavedVariables : MonoBehaviour
     {
         buttonPressed = "united_states";
         Reminder.SetActive(true);
+        Source.clip = sfx[0];
+        Source.Play();
     }
 
     public void AFButtonPressed()
     {
         buttonPressed = "Africa";
         Reminder.SetActive(true);
+        Source.clip = sfx[0];
+        Source.Play();
+
     }
 
     public void JPButtonPressed()
     {
         buttonPressed = "Japan";
         Reminder.SetActive(true);
+        Source.clip = sfx[0];
+        Source.Play();
+
     }
 
     public void CAButtonPressed()
     {
         buttonPressed = "Canada";
         Reminder.SetActive(true);
+        Source.clip = sfx[0];
+        Source.Play();
+
     }
 
     //TIME PANEL
@@ -63,6 +80,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.MilSelected = true;
         Debug.Log("Millenium Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.CentSelected = false;
@@ -77,6 +97,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.CentSelected = true;
         Debug.Log("Century Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.MilSelected = false;
@@ -91,6 +114,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.YearSelected = true;
         Debug.Log("Year Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.MilSelected = false;
@@ -107,6 +133,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.MonthSelected = true;
         Debug.Log("Month Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.MilSelected = false;
@@ -121,6 +150,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.DaySelected = true;
         Debug.Log("Day Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.MilSelected = false;
@@ -135,6 +167,9 @@ public class SavedVariables : MonoBehaviour
     {
         gameManagerScript.HourSelected = true;
         Debug.Log("Hour Selected!");
+        Source.clip = sfx[0];
+        Source.Play();
+
 
         //Set everything else to false
         gameManagerScript.MilSelected = false;
@@ -149,24 +184,35 @@ public class SavedVariables : MonoBehaviour
     public void Increase()
     {
         gameManagerScript.Increasement = true;
+        Source.clip = sfx[2];
+        Source.Play();
     }
 
     public void Decrease()
     {
         gameManagerScript.Decreasement = true;
+        Source.clip = sfx[3];
+        Source.Play();
     }
 
     public void Set()
     {
         gameManagerScript.Date = (gameManagerScript.Mil * 1000) + (gameManagerScript.Cent * 100) + (gameManagerScript.Year * 1);
         Debug.Log(gameManagerScript.Date);
+        dateText = gameManagerScript.Date.ToString(); //Sends date to year text (Jamie's Func)
+        Source.clip = sfx[1];
+        Source.Play();
     }
 
     //TIME SETTINGS
 
     public void DurationOfTravel()
     {
+        Source.clip = sfx[0];
+        Source.Play();
+
         count++;
+
         if (count != 0)
         {
             gameManagerScript.durationOfTravel = count;
@@ -182,6 +228,8 @@ public class SavedVariables : MonoBehaviour
     public void Save()
     {
         // Everything is ready
+        Source.clip = sfx[4];
+        Source.Play();
     }
 
    
