@@ -15,6 +15,9 @@ public class SavedVariables : MonoBehaviour
 
     int count; //Time Settings
 
+    // SWITCHES
+    public bool switchLeftOn, switchRightOn;
+
 
     //AUDIO MANAGER
     AudioSource Source;
@@ -71,6 +74,17 @@ public class SavedVariables : MonoBehaviour
         Source.clip = sfx[0];
         Source.Play();
 
+    }
+
+    // SWITCHES
+    public void ToggleLeftSwitch()
+    {
+        switchLeftOn = !switchLeftOn;
+    }
+
+    public void ToggleRightSwitch()
+    {
+        switchRightOn = !switchRightOn;
     }
 
     //TIME PANEL

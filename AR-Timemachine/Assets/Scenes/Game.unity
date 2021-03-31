@@ -2344,6 +2344,106 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641644683}
   m_CullTransparentMesh: 0
+--- !u!1001 &697077137
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9082132828550351465, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: _savedVariables
+      value: 
+      objectReference: {fileID: 1076287166}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 361
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 220.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351470, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828550351474, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_Name
+      value: MUSTBEENABLED(switches)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132828827344143, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1076287166}
+    - target: {fileID: 9082132828827344143, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleRightSwitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082132829141487664, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1076287166}
+    - target: {fileID: 9082132829141487664, guid: 679ff353f98bac341a4bcb73e0964f14,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleLeftSwitch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 679ff353f98bac341a4bcb73e0964f14, type: 3}
+--- !u!1 &697077138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9082132829427122449, guid: 679ff353f98bac341a4bcb73e0964f14,
+    type: 3}
+  m_PrefabInstance: {fileID: 697077137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &701849052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myLibrary: {fileID: 11400000, guid: 0ea5101b4dd1e4c438d9377e23fe1b09, type: 2}
-  Switches: {fileID: 0}
+  Switches: {fileID: 697077138}
   TimePanelInterface: {fileID: 1968803390}
   DestinationSelector: {fileID: 196950084}
   TimeSettings: {fileID: 1185701984}
@@ -4551,6 +4651,8 @@ MonoBehaviour:
   buttonPressed: no_destination
   dateText: 2021
   gameManagerScript: {fileID: 0}
+  switchLeftOn: 0
+  switchRightOn: 0
   sfx:
   - {fileID: 8300000, guid: 63c8236af78874265923b0a95cad11cf, type: 3}
   - {fileID: 8300000, guid: 694e76e67382d4566bfdc530bb7c6223, type: 3}
