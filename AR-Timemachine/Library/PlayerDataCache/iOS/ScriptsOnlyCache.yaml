@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - GameManager
     - ImageTracking
     - SavedVariables
+    - SwitchesController
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -68,6 +69,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 91
@@ -79,49 +86,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11294}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11498}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11630}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11960}
     - Class: 114
       Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12058}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 12098}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12608}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12804}
+      Script: {instanceID: 12616}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 12812}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12900}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 13120}
+      Script: {instanceID: 12930}
     - Class: 114
-      Script: {instanceID: 13252}
+      Script: {instanceID: 13128}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 13260}
     - Class: 114
-      Script: {instanceID: 13454}
+      Script: {instanceID: 13288}
     - Class: 114
-      Script: {instanceID: 13470}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 13622}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13662}
+      Script: {instanceID: 13630}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 13670}
+    - Class: 114
+      Script: {instanceID: 13748}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,6 +138,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -243,6 +254,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: f506356a40b969136e3943d50576e0cb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeSelector
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -255,7 +272,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 18e156d59a6a526930493db456255982
+      Hash: a22285f1d0c31bbd9e3bc5c858250a28
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SavedVariables
@@ -339,6 +356,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 9a7e1da2f0d6527f460c486d55ba09b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwitchesController
+  - hash:
+      serializedVersion: 2
       Hash: d251bf88db6c95a6b1aa0b69298da9ef
     assemblyName: UnityEngine.SpatialTracking.dll
     namespaceName: UnityEngine.SpatialTracking
@@ -351,7 +374,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: e1413c55e98cfbda9020cb87189d3477
+      Hash: cfaaf2aad084cecb223368d1c1b28cec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -802,4 +825,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Desktop/XR Terra/TimeMachineAR/AR-Time-Machine/Builds/v1.0
+  playerPath: F:/v1.2
