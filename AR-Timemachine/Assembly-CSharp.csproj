@@ -695,6 +695,9 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/Desktop/XR_Terra/TimeMachineAR/ARTimeMachineGit/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>E:/Desktop/XR_Terra/TimeMachineAR/ARTimeMachineGit/AR-Time-Machine/AR-Timemachine/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

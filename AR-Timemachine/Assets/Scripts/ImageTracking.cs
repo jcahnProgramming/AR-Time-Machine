@@ -21,10 +21,11 @@ public class ImageTracking : MonoBehaviour
     public Image CannotFindImage;
     private int _steps = 0;
     public GameManager manager;
-    public Animation anim;
+    public Animator anim;
     public GameObject ball;
     public GameObject logoPanel;
     public GameObject Reminder;
+    public GameObject ARScanImage;
 
 
     void Awake()
@@ -57,11 +58,13 @@ public class ImageTracking : MonoBehaviour
     public void StartScanning()
     {
         startScanning = true;
+        ARScanImage.SetActive(true);
     }
 
     public void StopScanning()
     {
         startScanning = false;
+        ARScanImage.SetActive(false);
     }
     public void FirstTimeScan()
     {
@@ -86,9 +89,8 @@ public class ImageTracking : MonoBehaviour
             {
                 if (_steps == 1)
                 {
-                    anim.Stop();
                     ball.transform.position = new Vector2(-395f, 132f);
-                    anim.Play();
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -109,6 +111,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 2)
                 {
                     ball.transform.position = new Vector2(-395f, 83f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -129,6 +132,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 3)
                 {
                     ball.transform.position = new Vector2(-395f, 29f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -149,6 +153,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 4)
                 {
                     ball.transform.position = new Vector2(-395f, -25f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -190,6 +195,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 1)
                 {
                     ball.transform.position = new Vector2(-395f, 132f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -209,6 +215,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 2)
                 {
                     ball.transform.position = new Vector2(-395f, 83f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -229,6 +236,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 3)
                 {
                     ball.transform.position = new Vector2(-395f, 29f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
@@ -249,6 +257,7 @@ public class ImageTracking : MonoBehaviour
                 if (_steps == 4)
                 {
                     ball.transform.position = new Vector2(-395f, -25f);
+                    anim.SetBool("moveBall", true);
                     CannotFindImage.gameObject.SetActive(false); //1st step
                     Incorrect.gameObject.SetActive(false); //3rd step
                     Correct.gameObject.SetActive(true); //2nd step
