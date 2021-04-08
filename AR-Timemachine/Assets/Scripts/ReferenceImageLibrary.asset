@@ -33,7 +33,7 @@ MonoBehaviour:
       m_GuidHigh: 6949694512826032331
     m_Size: {x: 1.3429091, y: 0.9199998}
     m_SpecifySize: 1
-    m_Name: Switches
+    m_Name: switches
     m_Texture: {fileID: 2800000, guid: 419f6e04e82e0f64cb207a9e56467260, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5714050407738694874
