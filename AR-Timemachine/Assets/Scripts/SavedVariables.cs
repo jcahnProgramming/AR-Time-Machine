@@ -51,6 +51,7 @@ public class SavedVariables : MonoBehaviour
         Reminder.SetActive(true);
         Source.clip = sfx[0];
         Source.Play();
+        gameManagerScript.NewDebugMessage("after us button pressed");
     }
 
     public void AFButtonPressed()
@@ -59,6 +60,7 @@ public class SavedVariables : MonoBehaviour
         Reminder.SetActive(true);
         Source.clip = sfx[0];
         Source.Play();
+        gameManagerScript.NewDebugMessage("after africa button pressed");
 
     }
 
@@ -68,6 +70,7 @@ public class SavedVariables : MonoBehaviour
         Reminder.SetActive(true);
         Source.clip = sfx[0];
         Source.Play();
+        gameManagerScript.NewDebugMessage("after japan button pressed");
 
     }
 
@@ -77,6 +80,7 @@ public class SavedVariables : MonoBehaviour
         Reminder.SetActive(true);
         Source.clip = sfx[0];
         Source.Play();
+        gameManagerScript.NewDebugMessage("after canada button pressed");
 
     }
 
@@ -252,6 +256,7 @@ public class SavedVariables : MonoBehaviour
         durationSpeed = gameManagerScript.displayText.text;
 
         gameManagerScript.LaunchTimeMachine();
+        gameManagerScript.NewDebugMessage("after savedvariables script ran Save() function");
     }
 
    

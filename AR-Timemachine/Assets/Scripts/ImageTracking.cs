@@ -23,7 +23,7 @@ public class ImageTracking : MonoBehaviour
     public GameManager manager;
     public Animator anim;
     public GameObject ball;
-    public GameObject logoPanel, switchPanel, timePanel, spacePanel, durationPanel;
+    public GameObject logoPanel, switchPanel, timePanel, spacePanel, durationPanel, launchPanel;
     public GameObject Reminder;
     public GameObject ARScanImage;
 
@@ -35,20 +35,26 @@ public class ImageTracking : MonoBehaviour
         //TODO: FIX THIS SECTION - JC
         subsystem.imageLibrary = myLibrary;
         subsystem.Start();
+        manager.NewDebugMessage("awake completed - ImageTracking.cs");
     }
     // Start is called before the first frame update
     void Start()
     {
+        manager.NewDebugMessage("before subscribed to camera image tracking");
         ARmanager.trackedImagesChanged += ARmanager_trackedImagesChanged;
+        manager.NewDebugMessage("after subscribed to camera image tracking");
     }
 
     private void ARmanager_trackedImagesChanged(ARTrackedImagesChangedEventArgs obj)
     {
+        manager.NewDebugMessage("inside the subscribed method");
         if (startScanning)
         {
+            manager.NewDebugMessage("startScanning bool trigger passed");
             foreach (ARTrackedImage image in obj.added)
             {
                 PanelChosen(image.referenceImage.name, image.gameObject.transform);
+                manager.NewDebugMessage("first foreach loop passed - added");
             }
         }
 
@@ -57,6 +63,7 @@ public class ImageTracking : MonoBehaviour
             foreach (ARTrackedImage image in obj.updated)
             {
                 PanelChosen(image.referenceImage.name, image.gameObject.transform);
+                manager.NewDebugMessage("second foreach loop passed - updated");
             }
         }
     }
@@ -67,6 +74,11 @@ public class ImageTracking : MonoBehaviour
         
     }
 
+    void IfLaunchReady(bool response)
+    {
+        launchPanel.gameObject.SetActive(response);
+    }
+
     void PanelChosen(string imageName, Transform imagePlace)
     {
         switch (imageName)
@@ -74,6 +86,7 @@ public class ImageTracking : MonoBehaviour
             case "logo":
                 if (_steps == 0)
                 {
+                    manager.NewDebugMessage("inside logo scan");
                     logoPanel.gameObject.transform.position = imagePlace.position;
                     startScanning = false;
                     logoPanel.SetActive(true);
@@ -83,6 +96,7 @@ public class ImageTracking : MonoBehaviour
             case "switches":
                 if (_steps == 1)
                 {
+                    manager.NewDebugMessage("inside switches scan");
                     switchPanel.gameObject.transform.position = imagePlace.position;
                     startScanning = false;
                     StepOne();
@@ -91,6 +105,7 @@ public class ImageTracking : MonoBehaviour
             case "TimePanel":
                 if (_steps == 2)
                 {
+                    manager.NewDebugMessage("inside timepanel scan");
                     timePanel.gameObject.transform.position = imagePlace.position;
                     startScanning = false;
                     StepTwo();
@@ -99,6 +114,7 @@ public class ImageTracking : MonoBehaviour
             case "SpacePanel":
                 if (_steps == 3)
                 {
+                    manager.NewDebugMessage("inside destination panel scan");
                     spacePanel.gameObject.transform.position = imagePlace.position;
                     startScanning = false;
                     StepThree();
@@ -107,6 +123,7 @@ public class ImageTracking : MonoBehaviour
             case "TimeDuration":
                 if (_steps == 4)
                 {
+                    manager.NewDebugMessage("inside duration panel scan");
                     durationPanel.gameObject.transform.position = imagePlace.position;
                     startScanning = false;
                     StepFour();
@@ -115,6 +132,7 @@ public class ImageTracking : MonoBehaviour
 
 
             default:
+                manager.NewDebugMessage("cannot find images");
                 CannotFindImage.gameObject.SetActive(true);
                 break;
         }
@@ -122,16 +140,23 @@ public class ImageTracking : MonoBehaviour
 
     public void CanScan()
     {
+        manager.NewDebugMessage("inside canscan function");
         startScanning = true;
     }
 
     public void NextButton()
     {
+        manager.NewDebugMessage("inside next button method");
         CanScan();
         TurnOffReminders();
-        if (_steps >= 5)
+        if (_steps > 6)
         {
-            _steps = 5;
+            _steps = 6;
+        }
+        else if (_steps == 6)
+        {
+            IfLaunchReady(true);
+            _steps = 6;
         }
         else
         {
@@ -141,11 +166,17 @@ public class ImageTracking : MonoBehaviour
 
     public void BackButton()
     {
+        manager.NewDebugMessage("inside backbutton method");
         CanScan();
         TurnOffReminders();
         if (_steps <= 0)
         {
             _steps = 1;
+        }
+        else if (_steps == 6)
+        {
+            IfLaunchReady(false);
+            _steps--;
         }
         else
         {
@@ -166,14 +197,17 @@ public class ImageTracking : MonoBehaviour
     }
     public void FirstTimeScan()
     {
+        manager.NewDebugMessage("before first time scan");
         PreviousBtn.gameObject.SetActive(true);
         NextBtn.gameObject.SetActive(true);
         Steps.SetActive(true);
         startBtn.gameObject.SetActive(false);
+        manager.NewDebugMessage("after first time scan");
     }
 
     void TurnOffReminders()
     {
+        manager.NewDebugMessage("turn off reminders");
         CannotFindImage.gameObject.SetActive(false);
         Incorrect.gameObject.SetActive(false);
         Correct.gameObject.SetActive(false);
@@ -182,6 +216,7 @@ public class ImageTracking : MonoBehaviour
 
     void StepOne() //EJ's Function
     {
+        manager.NewDebugMessage("step1");
         ball.transform.position = indicatorSteps[_steps].transform.position;
         anim.SetBool("moveBall", true);
         CannotFindImage.gameObject.SetActive(false); //1st step
@@ -193,6 +228,7 @@ public class ImageTracking : MonoBehaviour
 
     void StepTwo() //Mateo's Function
     {
+        manager.NewDebugMessage("step2");
         ball.transform.position = indicatorSteps[_steps].transform.position;
         anim.SetBool("moveBall", true);
         CannotFindImage.gameObject.SetActive(false); //1st step
@@ -204,6 +240,7 @@ public class ImageTracking : MonoBehaviour
 
     void StepThree() //Jamie's Function
     {
+        manager.NewDebugMessage("step3");
         ball.transform.position = indicatorSteps[_steps].transform.position;
         anim.SetBool("moveBall", true);
         CannotFindImage.gameObject.SetActive(false); //1st step
@@ -215,6 +252,7 @@ public class ImageTracking : MonoBehaviour
 
     void StepFour() //Mateo's Function
     {
+        manager.NewDebugMessage("step4");
         ball.transform.position = indicatorSteps[_steps].transform.position;
         anim.SetBool("moveBall", true);
         CannotFindImage.gameObject.SetActive(false); //1st step

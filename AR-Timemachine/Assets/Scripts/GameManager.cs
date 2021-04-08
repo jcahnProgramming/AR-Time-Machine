@@ -36,16 +36,18 @@ public class GameManager : MonoBehaviour
 
     public Camera arCamera;
 
+    public GameObject debugPanel;
 
-
-
-
+    private bool isDebugOn = false;
+    public List<string> debugMessages = new List<string>();
+    public Dropdown debugMessageList;
 
     void Awake()
     {
         var manager = gameObject.AddComponent<ARTrackedImageManager>();
         manager.referenceLibrary = myLibrary;
         manager.enabled = true;
+        NewDebugMessage("awake completed - GameManager");
     }
     // Start is called before the first frame update
     void Start()
@@ -249,37 +251,37 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void DebugMessages()
+    {
+        if (isDebugOn == true)
+        {
+            isDebugOn = false;
+            debugPanel.SetActive(false);
+        }
+        else if (isDebugOn == false)
+        {
+            isDebugOn = true;
+            debugPanel.SetActive(true);
+        }
+    }
+
     public void LaunchTimeMachine()
     {
         LaunchTimeMachineText.text = "Destination Info:\n Mil: " + Mil.ToString() + "\n Cent: " + Cent.ToString() + "\n Year: " + Year.ToString() + "\n Month: " + Month.ToString() + "\n Day: " + Day.ToString() + "\n Hour: " + Hour.ToString() +
                                      "\n Destination: " + destination + "\n Duration: " + durationOfTravel.ToString();
         //tint the camera here
-        //Launch button should tint the camera, but the panel needs to enable if the counter reaches 5 AND all panels have been configured
+
+
     }
+
+    public void NewDebugMessage(string msg)
+    {
+        Debug.Log(msg);
+
+        debugMessages.Add(msg);
+
+        debugMessageList.AddOptions(debugMessages);
+    }
+
+
 }
-
-
-
-
-
-
-    //void OnEnable() => m_TrackedImageManager.trackedImagesChanged += OnChanged;
-    //void OnDisable() => m_TrackedImageManager.trackedImagesChanged -= OnChanged;
-
-    //void OnChanged(ARTrackedImagesChangedEventArgs eventArgs)
-    //{
-    //    foreach (var newImage in eventArgs.added)
-    //    {
-
-    //    }
-
-    //    foreach (var updatedImage in eventArgs.updated)
-    //    {
-
-    //    }
-
-    //    foreach (var removedImage in eventArgs.removed)
-    //    {
-
-    //    }
-    //}
