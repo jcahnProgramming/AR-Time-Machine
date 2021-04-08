@@ -24,10 +24,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -40,9 +38,14 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -94,9 +97,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11298}
     - Class: 114
+      Script: {instanceID: 11512}
+    - Class: 114
       Script: {instanceID: 11554}
     - Class: 114
       Script: {instanceID: 11636}
+    - Class: 114
+      Script: {instanceID: 11962}
     - Class: 114
       Script: {instanceID: 11972}
     - Class: 114
@@ -107,6 +114,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12084}
     - Class: 114
       Script: {instanceID: 12124}
+    - Class: 114
+      Script: {instanceID: 12370}
     - Class: 114
       Script: {instanceID: 12842}
     - Class: 114
@@ -132,7 +141,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13726}
     - Class: 114
+      Script: {instanceID: 13784}
+    - Class: 114
       Script: {instanceID: 13804}
+    - Class: 114
+      Script: {instanceID: 13822}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,7 +293,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: a22285f1d0c31bbd9e3bc5c858250a28
+      Hash: a349d51b6405bda5870e74d0c57b3fc1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SavedVariables
@@ -382,7 +395,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: cfaaf2aad084cecb223368d1c1b28cec
+      Hash: 7972b5ed0a3212bf3ea162b55d6960a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -700,7 +713,7 @@ ScriptsOnlyBuild:
     className: ARMeshManager
   - hash:
       serializedVersion: 2
-      Hash: 280c134869a552c5580a321bfe0eadfe
+      Hash: 9ad76e0949fe6f89da72f1f0e9ecd935
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ImageTracking
@@ -827,4 +840,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Desktop/Testflight-App
+  playerPath: E:/Desktop/Builds/v.03

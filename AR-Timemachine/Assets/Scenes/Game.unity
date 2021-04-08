@@ -4319,10 +4319,10 @@ MonoBehaviour:
   durationOfTravel: 0
   displayText: {fileID: 916174539}
   LaunchTimeMachineText: {fileID: 542470167}
-  arCamera: {fileID: 0}
-  debugPanel: {fileID: 0}
+  arCamera: {fileID: 776375978}
+  debugPanel: {fileID: 1697052103}
   debugMessages: []
-  debugMessageList: {fileID: 0}
+  debugMessageList: {fileID: 265249356}
 --- !u!82 &1076287164
 AudioSource:
   m_ObjectHideFlags: 0
