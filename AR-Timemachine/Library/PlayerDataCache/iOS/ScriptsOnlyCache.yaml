@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     Unity.XR.ARFoundation.dll:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
@@ -38,14 +39,10 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Mask
-    - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -95,57 +92,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11272}
     - Class: 114
-      Script: {instanceID: 11298}
+      Script: {instanceID: 11300}
     - Class: 114
-      Script: {instanceID: 11512}
+      Script: {instanceID: 11514}
     - Class: 114
-      Script: {instanceID: 11554}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 11636}
+      Script: {instanceID: 11638}
     - Class: 114
-      Script: {instanceID: 11962}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 11972}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11996}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12084}
+      Script: {instanceID: 12126}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 12370}
+      Script: {instanceID: 12934}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12966}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 13170}
     - Class: 114
-      Script: {instanceID: 12964}
+      Script: {instanceID: 13234}
     - Class: 114
-      Script: {instanceID: 13168}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13306}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13334}
+      Script: {instanceID: 13520}
     - Class: 114
-      Script: {instanceID: 13518}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13534}
+      Script: {instanceID: 13578}
     - Class: 114
-      Script: {instanceID: 13576}
+      Script: {instanceID: 13688}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13728}
     - Class: 114
-      Script: {instanceID: 13726}
-    - Class: 114
-      Script: {instanceID: 13784}
-    - Class: 114
-      Script: {instanceID: 13804}
-    - Class: 114
-      Script: {instanceID: 13822}
+      Script: {instanceID: 13806}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -395,7 +386,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 7972b5ed0a3212bf3ea162b55d6960a2
+      Hash: a7068cf85ed6e78a953f3ea2537f3896
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -840,4 +831,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: E:/Desktop/Builds/v.03
+  playerPath: E:/Desktop/Builds/v1.5

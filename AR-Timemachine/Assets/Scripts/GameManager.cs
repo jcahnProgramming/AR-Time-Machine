@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private bool isDebugOn = false;
     public List<string> debugMessages = new List<string>();
-    public Dropdown debugMessageList;
+    public Text debugSlot;
 
     void Awake()
     {
@@ -280,7 +280,11 @@ public class GameManager : MonoBehaviour
 
         debugMessages.Add(msg);
 
-        debugMessageList.AddOptions(debugMessages);
+        //debugMessageList.AddOptions(debugMessages);
+
+        string fullMessage = "\n" + "DEBUG: " + msg;
+
+        debugSlot.text = debugSlot.text + fullMessage;
     }
 
 
