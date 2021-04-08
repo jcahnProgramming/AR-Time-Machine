@@ -71,7 +71,7 @@ public class ImageTracking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void IfLaunchReady(bool response)
@@ -260,6 +260,11 @@ public class ImageTracking : MonoBehaviour
         Correct.gameObject.SetActive(true); //2nd step
         manager.TravelDuration(); //runs Mateo's function
         Reminder.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        ARmanager.trackedImagesChanged -= ARmanager_trackedImagesChanged;
     }
 
 

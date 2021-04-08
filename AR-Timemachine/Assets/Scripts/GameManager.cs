@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Text displayText;
 
     public Text LaunchTimeMachineText;
+    public GameObject launchPanel;
 
     private string destination;
 
@@ -272,6 +273,11 @@ public class GameManager : MonoBehaviour
         //tint the camera here
 
 
+    }
+
+    public void CloseLaunchWindow()
+    {
+        launchPanel.SetActive(false);
     }
 
     public void NewDebugMessage(string msg)
