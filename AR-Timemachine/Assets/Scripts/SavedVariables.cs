@@ -22,6 +22,10 @@ public class SavedVariables : MonoBehaviour
     //AUDIO MANAGER
     AudioSource Source;
     public AudioClip [] sfx; //0 = button pressed, 1 = Ready, 2 = increase, 3 = decrease, 4 = process finished!;
+
+    //UI Elements
+
+    public string durationSpeed = "";
     
     // Start is called before the first frame update
     void Start()
@@ -244,6 +248,10 @@ public class SavedVariables : MonoBehaviour
         // Everything is ready
         Source.clip = sfx[4];
         Source.Play();
+
+        durationSpeed = gameManagerScript.displayText.text;
+
+        gameManagerScript.LaunchTimeMachine();
     }
 
    

@@ -30,6 +30,13 @@ public class GameManager : MonoBehaviour
     public int durationOfTravel;
     public Text displayText;
 
+    public Text LaunchTimeMachineText;
+
+    private string destination;
+
+    public Camera arCamera;
+
+
 
 
 
@@ -44,20 +51,20 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Date = 0;
-  
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void PlaceSelector() //jamie's function
     {
         DestinationSelector.SetActive(true);
         year.text = sv.dateText;
-        
+
     }
 
     public void SafetySwitches() //EJ's function
@@ -91,14 +98,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Mil++;
-                
+
                 Increasement = false;
                 milText.text = Mil.ToString();
             }
             else if (Decreasement == true)
             {
                 Mil--;
-                
+
                 Decreasement = false;
                 milText.text = Mil.ToString();
             }
@@ -112,14 +119,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Cent++;
-               
+
                 Increasement = false;
                 centText.text = Cent.ToString();
             }
             else if (Decreasement == true)
             {
                 Cent--;
-                
+
                 Decreasement = false;
                 centText.text = Cent.ToString();
             }
@@ -132,14 +139,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Year++;
-                
+
                 Increasement = false;
                 yearText.text = Year.ToString();
             }
             else if (Decreasement == true)
             {
                 Year--;
-                
+
                 Decreasement = false;
                 yearText.text = Year.ToString();
             }
@@ -152,14 +159,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Month++;
-                
+
                 Increasement = false;
                 monthText.text = Month.ToString();
             }
             else if (Decreasement == true)
             {
                 Month--;
-                
+
                 Decreasement = false;
                 yearText.text = Year.ToString();
             }
@@ -172,14 +179,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Day++;
-                
+
                 Increasement = false;
                 dayText.text = Day.ToString();
             }
             else if (Decreasement == true)
             {
                 Day--;
-                
+
                 Decreasement = false;
                 dayText.text = Day.ToString();
             }
@@ -192,14 +199,14 @@ public class GameManager : MonoBehaviour
             if (Increasement == true)
             {
                 Hour++;
-                
+
                 Increasement = false;
                 hourText.text = Hour.ToString();
             }
             else if (Decreasement == true)
             {
                 Hour--;
-                
+
                 Decreasement = false;
                 hourText.text = Hour.ToString();
             }
@@ -219,25 +226,40 @@ public class GameManager : MonoBehaviour
         Switches.SetActive(false);
 
 
-        if (durationOfTravel == 1) {
+        if (durationOfTravel == 1)
+        {
             displayText.text = "Slow";
-            
+
 
         }
 
-        if (durationOfTravel == 2) {
+        if (durationOfTravel == 2)
+        {
             displayText.text = "Intermediate";
-            
+
 
         }
 
-        if (durationOfTravel == 3) {
+        if (durationOfTravel == 3)
+        {
             displayText.text = "Fast";
-            
+
 
         }
 
     }
+
+    public void LaunchTimeMachine()
+    {
+        LaunchTimeMachineText.text = "Destination Info:\n Mil: " + Mil.ToString() + "\n Cent: " + Cent.ToString() + "\n Year: " + Year.ToString() + "\n Month: " + Month.ToString() + "\n Day: " + Day.ToString() + "\n Hour: " + Hour.ToString() +
+                                     "\n Destination: " + destination + "\n Duration: " + durationOfTravel.ToString();
+        //tint the camera here
+        //Launch button should tint the camera, but the panel needs to enable if the counter reaches 5 AND all panels have been configured
+    }
+}
+
+
+
 
 
 
@@ -261,4 +283,3 @@ public class GameManager : MonoBehaviour
 
     //    }
     //}
-}
