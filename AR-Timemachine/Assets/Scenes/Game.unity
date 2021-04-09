@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b735430e78292c14aa4def17233c70fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ARmanager: {fileID: 0}
+  ARmanager: {fileID: 1570295299}
   myLibrary: {fileID: 11400000, guid: 0ea5101b4dd1e4c438d9377e23fe1b09, type: 2}
   startScanning: 0
   startBtn: {fileID: 132273637}
@@ -2450,10 +2450,10 @@ MonoBehaviour:
   anim: {fileID: 2033553874}
   ball: {fileID: 1132744690}
   logoPanel: {fileID: 974687408}
-  switchPanel: {fileID: 697077139}
-  timePanel: {fileID: 10141153}
+  switchPanel: {fileID: 707810076}
+  timePanel: {fileID: 1895617812}
   spacePanel: {fileID: 162688017}
-  durationPanel: {fileID: 701849052}
+  durationPanel: {fileID: 1793000744}
   launchPanel: {fileID: 1902467087}
   Reminder: {fileID: 1378057661}
   ARScanImage: {fileID: 6396035878800486451}
@@ -3307,12 +3307,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff353f98bac341a4bcb73e0964f14, type: 3}
---- !u!1 &697077139 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9082132828550351474, guid: 679ff353f98bac341a4bcb73e0964f14,
-    type: 3}
-  m_PrefabInstance: {fileID: 697077137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &701849052
 GameObject:
   m_ObjectHideFlags: 0

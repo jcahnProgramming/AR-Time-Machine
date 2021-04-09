@@ -35,7 +35,9 @@ public class ImageTracking : MonoBehaviour
         //TODO: FIX THIS SECTION - JC
         subsystem.imageLibrary = myLibrary;
         subsystem.Start();
+        ARmanager = FindObjectOfType<ARTrackedImageManager>();
         manager.NewDebugMessage("awake completed - ImageTracking.cs");
+
     }
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,20 @@ public class ImageTracking : MonoBehaviour
                 manager.NewDebugMessage("second foreach loop passed - updated");
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        manager.NewDebugMessage("inside OnEnable before subscription");
+        ARmanager.trackedImagesChanged += ARmanager_trackedImagesChanged;
+        manager.NewDebugMessage("inside OnEnable after subscription");
+    }
+
+    private void OnDisable()
+    {
+        manager.NewDebugMessage("inside onDisable before subscription");
+        ARmanager.trackedImagesChanged -= ARmanager_trackedImagesChanged;
+        manager.NewDebugMessage("inside onDisable after subscription");
     }
 
     // Update is called once per frame
